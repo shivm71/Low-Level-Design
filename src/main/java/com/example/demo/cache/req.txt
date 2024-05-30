@@ -1,0 +1,28 @@
+1. Cache
+
+get put
+type of put in cache cache (read through and write back)
+eviction policy (LRU / LFU)
+cache expiration time in minutes ?
+
+
+
+2. Data type of Executor
+
+1. Single Thread pool -
+2. Cached Thread pool - Dynamic but costly
+3. Fixed Thread pool -
+4. Work Thread Pool -
+5. Clint based single tread executor
+
+
+som = 1
+shivam = 3
+
+hash(key)
+
+hash(key1) % n == hash(key2) % n
+
+50% of the
+
+

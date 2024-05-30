@@ -1,0 +1,28 @@
+Requirements (Alarm Clock)
+
+1. Set alarm (name , time ,frequency, specific days, message(Optional), Snooze, ringtone)
+2. Delete alarm
+3. View upcoming alarms (ACTIVE / INACTIVE / ALL)
+4. Sentivity of alarm (Minute / Second)
+5.
+
+
+Classes
+
+Controller
+Alarm BUILDER
+Service
+Database
+TimeService
+
+Main Thread -> Tick Thread -> Ring Thread
+
+
+FAQ -
+
+1. How to handle multiple alarms at same time
+2. Every alarm should act like unique alarm although if it happens on same time
+
+Parent class to child dependency
+
+

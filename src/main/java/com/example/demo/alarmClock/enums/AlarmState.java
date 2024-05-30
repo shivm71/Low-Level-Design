@@ -1,0 +1,5 @@
+package com.example.demo.alarmClock.enums;
+
+public enum AlarmState {
+    NEW, SNOOZED, DISMISSED, DISABLED, TRIGGERED, TRIGGERED_SNOOZED, TRIGGERED_DISMISSED, TRIGGERED_DISABLED, TRIGGERED_ENABLED;
+}
