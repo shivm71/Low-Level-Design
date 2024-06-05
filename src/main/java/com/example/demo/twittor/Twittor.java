@@ -120,12 +120,9 @@ class UserService{
 
 
 class User {
-
-
     String name;
     Set<String> followers = new HashSet<>();
     Set<String> followees = new HashSet<>();
-
 
 }
 

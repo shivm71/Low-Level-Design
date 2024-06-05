@@ -15,9 +15,7 @@ public class KeyedExecutor {
     public final BlockingQueue<Runnable> er = new ArrayBlockingQueue<>(10);
 
     public KeyedExecutor(final int threads) {
-//        this.er.
         executor = new Executor[threads];
-//        executorService.
 
         for (int i = 0; i < threads; i++) {
             executor[i] = Executors.newSingleThreadExecutor();
