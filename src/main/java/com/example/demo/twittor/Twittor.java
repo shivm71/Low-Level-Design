@@ -34,7 +34,7 @@ class Tweet extends Analytics {
 
     @Override
     public String toString() {
-        return "Content = " + content + ", hastags =" + hashtags + " retweet = "+ retweet + " Likes = "+likes;
+        return "Content = " + content + ", hashtags =" + hashtags + " retweet = "+ retweet + " Likes = "+likes;
     }
 
 }
