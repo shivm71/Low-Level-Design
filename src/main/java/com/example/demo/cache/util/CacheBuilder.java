@@ -1,10 +1,9 @@
 package com.example.demo.cache.util;
 
 
-
 import com.example.demo.cache.async.KeyExcecutor;
-import com.example.demo.cache.enumm.EvictionType;
 import com.example.demo.cache.enumm.CacheType;
+import com.example.demo.cache.enumm.EvictionType;
 import com.example.demo.cache.model.HotLoadingObject;
 import com.example.demo.cache.service.Cache;
 
@@ -24,7 +23,8 @@ public class CacheBuilder<T> {
     private int size;
     private int concurrency;
 
-    private CacheBuilder() {}
+    private CacheBuilder() {
+    }
 
     public static CacheBuilder<Object> builder() {
         return new CacheBuilder<>();

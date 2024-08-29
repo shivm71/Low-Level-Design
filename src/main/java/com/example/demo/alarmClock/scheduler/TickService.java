@@ -15,7 +15,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
 
 @Slf4j
 public class TickService {
@@ -64,7 +63,7 @@ public class TickService {
             ringAlarmExecutor.shutdown();
             alarmSchedular.removeTimeAlarm(alarmsToSchedule.get(0).getNextRingTime());
             handle();
-        }, alarmsToSchedule.get(0).getNextRingTime() - Instant.now().getEpochSecond() , TimeUnit.SECONDS);
+        }, alarmsToSchedule.get(0).getNextRingTime() - Instant.now().getEpochSecond(), TimeUnit.SECONDS);
         executors.shutdown();
 
 

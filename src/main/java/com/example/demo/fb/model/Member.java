@@ -1,7 +1,5 @@
 package com.example.demo.fb.model;
 
-import com.example.demo.fb.model.enums.AccountStatus;
-
 
 import java.util.List;
 

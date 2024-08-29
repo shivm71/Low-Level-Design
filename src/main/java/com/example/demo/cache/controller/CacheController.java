@@ -3,8 +3,6 @@ package com.example.demo.cache.controller;
 
 import com.example.demo.cache.async.KeyExcecutor;
 import com.example.demo.cache.enumm.CacheType;
-import com.example.demo.cache.model.HotLoadingObject;
-import com.example.demo.cache.service.Cache;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;

@@ -34,7 +34,7 @@ class Tweet extends Analytics {
 
     @Override
     public String toString() {
-        return "Content = " + content + ", hashtags =" + hashtags + " retweet = "+ retweet + " Likes = "+likes;
+        return "Content = " + content + ", hashtags =" + hashtags + " retweet = " + retweet + " Likes = " + likes;
     }
 
 }
@@ -42,11 +42,13 @@ class Tweet extends Analytics {
 
 class TweetStore {
 
+    private static final TweetStore INSTANCE = new TweetStore();
     Map<String, List<Tweet>> store = new HashMap<>();
 
-    private static final TweetStore INSTANCE = new TweetStore();
-    private TweetStore() {}
-    public static TweetStore getInstance()  {
+    private TweetStore() {
+    }
+
+    public static TweetStore getInstance() {
         return INSTANCE;
     }
 }
@@ -54,11 +56,13 @@ class TweetStore {
 
 class UserStore {
 
-    Map<String, User> store = Map.of("user1", new User(),"user2", new User(), "user3", new User());
-
     private static final UserStore INSTANCE = new UserStore();
-    private UserStore() {}
-    public static UserStore getInstance()  {
+    Map<String, User> store = Map.of("user1", new User(), "user2", new User(), "user3", new User());
+
+    private UserStore() {
+    }
+
+    public static UserStore getInstance() {
         return INSTANCE;
     }
 
@@ -71,7 +75,7 @@ class TweetService {
 
     public Tweet addTweet(String userId, Tweet tweet) {
         if (!tweetStore.store.containsKey(userId)) {
-            tweetStore.store.put(userId,new ArrayList<>());
+            tweetStore.store.put(userId, new ArrayList<>());
         }
         tweetStore.store.get(userId).add(tweet);
         return tweet;
@@ -83,7 +87,7 @@ class TweetService {
 
     public void retweet(String userId, String tweetId) {
         Tweet tweet = tweetStore.store.getOrDefault(userId, new ArrayList<>()).stream().filter(tw -> tweetId.equals(tw.id)).findFirst().get();
-        tweet.retweet+=1;
+        tweet.retweet += 1;
     }
 
 }
@@ -103,7 +107,7 @@ class TimeLineService {
 }
 
 
-class UserService{
+class UserService {
 
     UserStore userStore = UserStore.getInstance();
 

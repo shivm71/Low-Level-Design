@@ -1,7 +1,5 @@
 package com.example.demo.elevator;
 
-import jakarta.websocket.server.ServerEndpoint;
-import lombok.Builder;
 import lombok.Data;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;

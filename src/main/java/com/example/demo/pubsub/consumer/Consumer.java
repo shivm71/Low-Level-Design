@@ -32,10 +32,12 @@ public class Consumer {
         throw new RuntimeException();
 //        Thread.sleep(Util.getRandomInRange(100, 1500));
     }
-   public void sendSubscriptionRequest(Topic topic, int offset){
+
+    public void sendSubscriptionRequest(Topic topic, int offset) {
         topic.addConsumer(this, offset);
         log.info("Consumer " + ID + " subscribed to topic " + topic.getName());
     }
+
     public void removeSubscription(Topic topic) {
         topic.removeConsumer(this);
     }

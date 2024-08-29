@@ -1,27 +1,20 @@
 package com.example.demo.cache.async;
 
 
-
 import java.util.HashMap;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class KeyExcecutor {
 
-    private int noOfThreads;
-
     private final ExecutorService executors;
-
+    private int noOfThreads;
     private HashMap<String, ExecutorService> threadPool = new HashMap<>();
 
-    public void removeExecutor(String cacheKey) {
-        synchronized (cacheKey){
-
-        }
+    public KeyExcecutor(int noOfThreads) {
+        executors = Executors.newCachedThreadPool();
     }
 
 //    public ExecutorService getExecutor(String key) {
@@ -39,8 +32,10 @@ public class KeyExcecutor {
 //        }
 //    }
 
-    public KeyExcecutor(int noOfThreads) {
-        executors = Executors.newCachedThreadPool();
+    public void removeExecutor(String cacheKey) {
+        synchronized (cacheKey) {
+
+        }
     }
 
     public CompletableFuture<Void> run(Runnable runnable) {

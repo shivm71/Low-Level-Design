@@ -9,9 +9,9 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class AlarmService {
 
+    private static final int DEFAULT_MAX_SNOOZE_COUNT = 3;
     private AlarmSchedular alarmSchedular = new AlarmSchedular(this);
     private AlarmRepository alarmRepository = AlarmRepository.getInstance();
-    private static final int DEFAULT_MAX_SNOOZE_COUNT = 3;
 
     public static void ringAlarm(Alarm alarm) {
         System.out.printf("Alarm ring for - %s%n", alarm);

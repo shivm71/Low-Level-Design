@@ -13,7 +13,7 @@ public class ElevatorDriver {
         Controller controller = new Controller();
         List<Elevator> elevators = new ArrayList<>();
 
-        for (int i = 1; i <= 6; i+=1) {
+        for (int i = 1; i <= 6; i += 1) {
             elevators.add(Elevator.builder().id(i).build());
         }
         log.info(elevators.toString());
@@ -21,8 +21,8 @@ public class ElevatorDriver {
         Random random = new Random();
         int min = 0;
         int max = 6;
-        for (int i = 1; i <= 10; i+=1) {
-            int floor =  random.nextInt(max - min) + min;
+        for (int i = 1; i <= 10; i += 1) {
+            int floor = random.nextInt(max - min) + min;
             Request request = Request.builder().requestedFloor(floor).build();
             controller.addRequest(request);
         }

@@ -7,21 +7,22 @@ import lombok.SneakyThrows;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Repository<T> {
 
-    private Repository(){}
-    private static final Gson gson = new Gson();static final Repository INSTANCE = new Repository();
+    static final Repository INSTANCE = new Repository();
+    private static final Gson gson = new Gson();
+    private static final String filePath = "../db.json";
     private Map<String, T> map = new HashMap<>();
 
-    private static final String filePath = "../db.json";
+    private Repository() {
+    }
+
     public static Repository instance() {
         return INSTANCE;
     }
-
 
 
     @SneakyThrows
@@ -47,7 +48,6 @@ public class Repository<T> {
         Thread.sleep(2000);
         map.put(key, value);
     }
-
 
 
 }

@@ -4,10 +4,6 @@ import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.locks.ReadWriteLock;
-import java.util.concurrent.locks.ReentrantLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class CustomThreadpool implements ThreadFactory {
 
@@ -29,8 +25,6 @@ public class CustomThreadpool implements ThreadFactory {
             return threadPool.get(key);
         }
     }
-
-
 
 
     public void onThreadEnd(String key) {

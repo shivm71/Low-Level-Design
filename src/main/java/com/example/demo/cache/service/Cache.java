@@ -45,7 +45,7 @@ public class Cache<T> {
         startDeleteSchedular();
         if (hotLoading.isEnabled()) {
             hotLoading.getValueExtractor().get().entrySet().parallelStream()
-                    .forEach((stringObjectEntry -> put(stringObjectEntry.getKey(), (T)stringObjectEntry.getValue())));
+                    .forEach((stringObjectEntry -> put(stringObjectEntry.getKey(), (T) stringObjectEntry.getValue())));
         }
     }
 
